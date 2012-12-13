@@ -57,7 +57,10 @@ console.log(data);
 console.log('')
 
 console.log(require('util').inspect(mainCache, false, null));
+console.log('')
+
 console.log(findInCache(mainCache, 'abc', 0));
+console.log('')
 
 
 
