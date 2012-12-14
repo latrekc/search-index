@@ -13,10 +13,21 @@ var data = [
 	'аб',
 	'абв',
 	'абвг',
+
+	'xthysq',
+	'черный',
+	'чёрный',
+
+	'ifgjdfk',
+	'shapoval',
+	'shapoval',
+	'shkinev',
+	'шаповал',
+
+	'shkinev',
 ];
 
-
-var index = require('./lib/search-index')(data);
+var index = SearchIndex(data);
 
 data.forEach(function(str, i) {
 	console.log(i, str);
@@ -24,8 +35,11 @@ data.forEach(function(str, i) {
 console.log('')
 
 console.log(index.find('abc'));
+console.log(index.find('чер'));
+console.log(index.find('ш'));
+console.log(index.find('шaповал'));
 console.log('')
-
+console.dir(index.cache());
 
 
 
