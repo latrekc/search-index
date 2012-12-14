@@ -1,3 +1,48 @@
 test
+<script src="corp.js"></script>
 <script src="lib/search-index.js"></script>
-<script src="test.js"></script>
+
+<script type="text/javascript">
+function prepare(count) {
+	var data = [];
+
+	console.time('prepare data ' + corp.body.length);
+	corp.body.forEach(function(contact) {
+		data.push(contact.name.first, contact.name.last);
+
+		var email = contact.emails[0];
+		data.push(email);
+		data.push.apply(data, email.split(/@/));
+		data.push.apply(data, email.split(/./));
+	}) 
+	console.timeEnd('prepare data ' + corp.body.length);
+
+	data = data.slice(0, count || 1);
+
+	console.log('data length', data.length);
+
+	return data;
+}
+
+function index(data) {
+	console.time('create search index ' + data.length);
+	var index = SearchIndex(data);
+	console.timeEnd('create search index ' + data.length);
+
+	return index;
+}
+
+function find(index) {
+	console.time();
+	console.log(index.find('шкинев'));
+	console.timeEnd();
+
+	console.time();
+	console.log(index.find('черный'));
+	console.timeEnd();
+
+	console.time();
+	console.log(index.find('шаповал'));
+	console.timeEnd();
+}
+</script>
