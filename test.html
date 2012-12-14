@@ -25,11 +25,11 @@ function prepare(count) {
 }
 
 function index(data) {
-	console.time('create search index ' + data.length);
+	console.time('create search index ' + data[0]);
 	var index = SearchIndex(data);
-	console.timeEnd('create search index ' + data.length);
+	console.timeEnd('create search index ' + data[0]);
 
-	return index;
+	console.dir(index.debug());
 }
 
 function find(index) {

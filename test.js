@@ -43,3 +43,5 @@ console.log(index.find('ш'));
 console.log(index.find('шaповал'));
 console.log('')
 console.timeEnd('find');
+
+console.log(index.debug());
