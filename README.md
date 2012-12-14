@@ -3,7 +3,6 @@ search-index
 
 запуск в консоли
 
-    tugovikov-new@tugovikov-mail:~/Code/latrekc/search-index (master *)$ node test.js
     create index: 286ms
     0 'a'
     1 'ab'
@@ -38,9 +37,95 @@ search-index
     [ 'shapoval', 'shapoval', 'шаповал', 'ifgjdfk' ]
 
     find: 13ms
-    { letters: 46811, ids: 76491, put: 22814, find: 1100 }
-    tugovikov-new@tugovikov-mail:~/Code/latrekc/search-index (master *)$ 
+    {
+      letters: 46 811,
+          ids: 76 491,
+          put: 22 814,
+         find:  1 100
+    }
 
 
-запуск в брузере
-	
+запуск в браузере
+	    create search index a: 0ms
+    find	0
+    ids		3
+    letters	3
+    put		1
+    
+    create search index an: 0ms
+    find	 0
+    ids		12
+    letters	12
+    put		 4
+    
+    create search index ant: 1ms
+    find	 0
+    ids		39
+    letters	39
+    put		13
+    
+    create search index anti: 1ms
+    find	  0
+    ids		174
+    letters	174
+    put		 40
+    
+    create search index antip: 3ms
+    find	  0
+    ids		579
+    letters	579
+    put		175
+    
+    create search index antipo: 8ms
+    find	    0
+    ids		1 794
+    letters	1 794
+    put		  580
+    
+    create search index antipov: 24ms
+    find	    0
+    ids		5 439
+    letters	5 439
+    put		1 795
+    
+    create search index antipov@: 63ms
+    find	    0
+    ids		9 084
+    letters	9 084
+    put		5 440
+    
+    create search index antipov@c: 109ms
+    find 	     0
+    ids		20 019
+    letters	20 019
+    put		 9 085
+    
+    create search index antipov@co: 283ms
+    find	     0
+    ids		52 824
+    letters	52 824
+    put		20 020
+    
+    create search index antipov@cor: 701ms
+    find	      0
+    ids		151 239
+    letters	151 239
+    put		 52 825
+    
+    create search index antipov@corp: 1880ms
+    find	      0
+    ids		446 484
+    letters	446 484
+    put		151 240
+    
+    create search index antipov@corp.: 5361ms
+    find	        0
+    ids		1 036 974
+    letters	1 036 974
+    put		  446 485
+    
+    create search index antipov@corp.m: 14013ms
+    find	        0
+    ids		2 808 444
+    letters	2 808 444
+    put		1 036 975
